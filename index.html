@@ -1,0 +1,422 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azhari Sharil</title>
+    <link rel="icon" type="image/x-icon" href="images/logo2.png">
+    <!-- External CSS (for Font Awesome icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/banner2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+        .logo {
+            float: left;
+            margin-left: 20px;
+			margin-top: 0.5px;
+        }
+        section {
+            padding: 80px 30px;
+            margin: 40px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .home {
+			text-align: center;
+			background: url('images/8.jpg') no-repeat center center;
+			background-size: cover;
+			color: #fff;
+			height: 100vh;
+			width:500vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.home h1 {
+			font-size: 4.5em;
+			font-weight: bold;
+			margin-top: 255px; /* Moves the main heading down */
+			margin-bottom: 50px
+		}
+
+		.home p {
+			font-size: 1.8em;
+			margin-top: 20px; /* Adds space below the heading */
+		}
+			
+        .btn {
+            background-color: #ffa500;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.4em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ff7f00;
+        }
+		
+		
+		
+        .about {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .about-text {
+            width: 65%;
+            padding: 30px;
+        }
+        .about-image {
+            position: sticky;
+            top: 20px;
+            width: auto;
+            margin-top: 0;
+			margin-right:60px;
+            height: auto;
+            border-radius: 60px;
+            box-shadow: 0px 00px rgba(0.8, 0, 0, 0.8);
+            margin-top: 5px;  /* Ensures it doesn’t overlap with text */
+			margin-left : 10px
+        }
+        .achievement, .testimonials {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .achievement .project, .testimonials .testimonial {
+            display: inline-block;
+            margin: 20px;
+            width: calc(33% - 40px);
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .achievement .project:hover, .testimonials .testimonial:hover {
+            transform: scale(1.05);
+        }
+        .achievement img, .testimonials img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+		.video {
+			background: url('images/9.jpg') no-repeat center center;
+			background: rgba(0, 0, 0, 0.8);
+			padding: 80px 40px;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+		}
+
+		.video h2 {
+			font-size: 1.8em;
+			margin-bottom: 30px;
+		}
+
+		.video-container {
+			max-width: 700px;
+			max-height: 600px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.video iframe {
+			border: none;
+			border-radius: 10px;
+			width: 100%;
+			height: 400px; /* You can adjust this height */
+		}
+		.contact {
+			background: url('images/contact.jpg') no-repeat center center;
+			background-size: cover;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 50px 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+		.contact h3 {
+			font-size: 3em;
+			margin-bottom: 20px;
+		}
+
+		.contact p {
+			font-size: 1.0em;
+			margin-bottom: 30px;
+		}
+
+		form {
+			max-width: 550px;
+			margin: 0 auto;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 30px;
+			border-radius: 10px;
+		}
+
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		label {
+			font-size: 1.2em;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		input, textarea {
+			width: 95%;
+			padding: 10px;
+			font-size: 1em;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+		}
+
+		input:focus, textarea:focus {
+			border-color: #ffa500; /* Focus border color */
+		}
+
+		button {
+			background-color: #ffa500;
+			color: #fff;
+			padding: 15px 30px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		button:hover {
+			background-color: #ff6600;
+		}
+
+		
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-top: 1px solid #ccc;
+        }
+        footer a {
+            color: #ffa500;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .portfolio .project, .testimonials .testimonial {
+                width: calc(50% - 40px);
+            }
+            .about-text {
+                width: 100%;
+            }
+            .about-image {
+                width: 100%;
+                margin-top: 20px;
+                position: relative;
+                top: auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .portfolio .project, .testimonials .testimonial {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo1.png" alt="Logo" class="logo" style="width: 150px;">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#achievement">Achievement</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="home">
+        <h1>Welcome to Azhari Sharil's Website</h1>
+        <p>Discover more about me, my experiences, and how to get in touch!</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Assalammualaikum WBT. and Hye !.</p>
+			<p>My Name is muhammad Noor Azhari Bin Sharil, peoples call me Azhari or Ayie.</P>
+			<p>I am the third child of 6 siblings and have 2 older sisters and 3 younger sisters which means I am the only boy.
+			<p>I am Final Year Student in Diploma of Information Management and currently studying at UiTM Rembau. My passion in coding are very strong and really hoping to persue in Degree of Information System Management in the near future, InshAllah.</p>
+			<p>I love to watch Anime, K-Drama and listen on every genre of songs too.</p>
+			<p>Want to know more about me? Don't hesitate to scroll down this pages !</p>
+	   </div>
+        <div class="about-image">
+            <img src="images/10.png" alt="Azhari Sharil's Photo" style= "width:290px">
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h1>Experience</h1>
+		 <h3>Cendana AHS Enterprise 2022-2023</h3>
+            <p>Event Decorator</p>
+			<p>Streamlined inventory management to cut waste and costs.
+			Boosted revenue with add-on services like custom arrangements.
+			Analyzed events for improvement.
+			Coordinated with vendors for on-time, budget-friendly projects.
+			Led diverse teams for seamless event planning.</p>
+			<h3>ASSHA GLOBAL RESOURSCESS (Wangsa Ceria Catering) 2021-2022</h3>
+            <p>Catering Clerk</p>
+			<p>Regularly evaluated catering staff, pinpointing growth opportunities.
+			Cut food waste via inventory monitoring and storage methods. 
+			Mentored junior team for excellent service culture.</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+            <li>Diploma In Information Management Universiti Teknologi Mara (UiTM) Rembau 2022 - 2025</li>
+			<p> </p>
+            <li>Sijil Pelajaran Malaysia (SPM) SMK SEGAMBUT JAYA 2021</li>
+        </ul>
+    </section>
+
+    <!-- Achievement Section -->
+    <section id="achievement" class="achievement">
+        <h2>My Achievement</h2>
+        </div>
+       
+        <div class="project">
+            <img src="images/15.jpg" alt="Project 2">
+            <h3>Becoming A new student's fasilitator for MDS </h3>
+			<p></p>
+            <p>Successfully became a fasilitator to conduct and helped a new student intake in UiTM Rembau</p> 
+			<p>This Program were organized by the volunteers of students of UiTM Cawangan Negeri sembilan on behalf of HEP .</p>
+        </div>
+
+		<div class="project">
+            <img src="images/11.jpg" alt="Project 1">
+            <h3>President of IMCo 2023/2024 Session</h3>
+            <p>Becoming President of Information Management Community (IMCo) </p> 
+			<p>Increased student community visibility through the effective use of social media platforms and marketing efforts.
+			Coordinated volunteer activities to promote community involvement among Student community members.
+			Enhanced member engagement by organizing and hosting regular events, meetings, and workshops.</p>
+        </div>
+		
+		<div class="project">
+            <img src="images/14.jpg" alt="Project 3">
+            <h3>Best Faculty Winner in B.E.E.B</h3>
+			<p></p>
+            <p>Successfully brought the name of the faculty to be the winner of the Best Faculty category in the
+			Cultural Aesthetics Ethics Month (B.E.E.B)</p> 
+			<p>Program that organized by MPP UiTM Negeri sembilan 2022/2023 Session.</p>
+        </div>
+    </section>
+	
+<!-- Video Section -->
+<section id="video" class="video">
+    <h2>My Favourite song</h2>
+    <div class="video-container">
+        <!-- Video Embed  -->
+        <iframe width="80%" height="400" src="images/1.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<figcaption>Rahsia Tuhan- Noh Salleh</figcaption>
+	</div>
+</section>
+
+    <!-- Contact Me Section -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to reach out, feel free to fill out the form below:</p>
+    <form action="submit_form.php" method="POST">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</section>
+
+
+    <!-- For more Information -->
+    <section id="contact" class="contact">
+        <h2>For more Information</h2>
+        <p>You can reach out me via:</p>
+        <ul>
+            <li>Email: muhammadnoorazharisharil@gmail.com</li>
+            <li>Phone: +60 18-395 0419</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/azhari-sharil-877527328/" target="_blank" style="color: #ffa500;">linkedin.com/in/azharisharil</a></li>
+			<li>Facebook: <a href="https://www.facebook.com/muhammadnoorazhari.sharil" target="_blank" style="color: #ffa500;">facebook.com/muhammadnoorazharisharil</a></li>
+			<li>Instagram: <a href="https://www.instagram.com/azharisharil" target="_blank" style="color: #ffa500;">instagram.com/azharisharil</a></li>
+	   <p></p>
+	   <a href="images/resume.pdf" target="blank" style="color: #ffa500;"> My Resume/Download </a>
+	   </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Azhari Sharil. All rights reserved.</p>
+    </footer>
+</body>
+</html>
